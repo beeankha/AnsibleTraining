@@ -1,0 +1,8 @@
+- name: create mad libs directory
+  file:
+    path: ~/Documents/{{last_name}}
+    state: directory
+- name: create sick note
+  template:
+    src: templates/sicknote.j2
+    dest: ~/Documents/{{last_name}}/sick_note.md
